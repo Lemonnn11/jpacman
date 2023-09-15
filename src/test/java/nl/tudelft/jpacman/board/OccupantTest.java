@@ -2,6 +2,7 @@ package nl.tudelft.jpacman.board;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import nl.tudelft.jpacman.sprite.Sprite;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,8 +32,7 @@ class OccupantTest {
      */
     @Test
     void noStartSquare() {
-        // Remove the following placeholder:
-        assertThat(unit).isNotNull();
+        assertThat(unit.hasSquare()).isFalse();
     }
 
     /**
@@ -41,8 +41,19 @@ class OccupantTest {
      */
     @Test
     void testOccupy() {
-        // Remove the following placeholder:
-        assertThat(unit).isNotNull();
+        Square target = new Square() {
+            @Override
+            public boolean isAccessibleTo(Unit unit) {
+                return false;
+            }
+
+            @Override
+            public Sprite getSprite() {
+                return null;
+            }
+        };
+        unit.occupy(target);
+        assertThat(unit.hasSquare()).isTrue();
     }
 
     /**
@@ -52,6 +63,30 @@ class OccupantTest {
     @Test
     void testReoccupy() {
         // Remove the following placeholder:
-        assertThat(unit).isNotNull();
+        Square target1 = new Square() {
+            @Override
+            public boolean isAccessibleTo(Unit unit) {
+                return false;
+            }
+
+            @Override
+            public Sprite getSprite() {
+                return null;
+            }
+        };
+        Square target2 = new Square() {
+            @Override
+            public boolean isAccessibleTo(Unit unit) {
+                return false;
+            }
+
+            @Override
+            public Sprite getSprite() {
+                return null;
+            }
+        };
+        unit.occupy(target1);
+        unit.occupy(target2);
+        assertThat(unit.hasSquare()).isTrue();
     }
 }
