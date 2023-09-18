@@ -41,17 +41,7 @@ class OccupantTest {
      */
     @Test
     void testOccupy() {
-        Square target = new Square() {
-            @Override
-            public boolean isAccessibleTo(Unit unit) {
-                return false;
-            }
-
-            @Override
-            public Sprite getSprite() {
-                return null;
-            }
-        };
+        Square target = new BasicSquare();
         unit.occupy(target);
         assertThat(unit.hasSquare()).isTrue();
     }
@@ -63,28 +53,8 @@ class OccupantTest {
     @Test
     void testReoccupy() {
         // Remove the following placeholder:
-        Square target1 = new Square() {
-            @Override
-            public boolean isAccessibleTo(Unit unit) {
-                return false;
-            }
-
-            @Override
-            public Sprite getSprite() {
-                return null;
-            }
-        };
-        Square target2 = new Square() {
-            @Override
-            public boolean isAccessibleTo(Unit unit) {
-                return false;
-            }
-
-            @Override
-            public Sprite getSprite() {
-                return null;
-            }
-        };
+        Square target1 = new BasicSquare();
+        Square target2 = new BasicSquare();
         unit.occupy(target1);
         unit.occupy(target2);
         assertThat(unit.hasSquare()).isTrue();
