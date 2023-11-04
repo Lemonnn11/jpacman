@@ -4,7 +4,10 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
+ * A very simple (and not particularly useful)
  * Test suite for the Board class.
+ *
+ * @author Pannavich
  */
 public class BoardTest {
 
