@@ -3,6 +3,9 @@ package nl.tudelft.jpacman.board;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Test suite for the Board class.
+ */
 public class BoardTest {
 
     /**
