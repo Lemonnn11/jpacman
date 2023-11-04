@@ -29,6 +29,5 @@ public class BoardTest {
         Board board = new Board(grid);
         assertThat(board.invariant()).isFalse();
         assertThat(board.squareAt(0, 0)).isEqualTo(null);
-        // Assert.assertEquals(null, board.squareAt(1, 0));
     }
 }
