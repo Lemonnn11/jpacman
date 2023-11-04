@@ -10,6 +10,10 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Pannavich
  */
 public class BoardTest {
+    /**
+     * Do we get the correct delta when moving north?
+     */
+
 
     /**
      * Test creating the board.
