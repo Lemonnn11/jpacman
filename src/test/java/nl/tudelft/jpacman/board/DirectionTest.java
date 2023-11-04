@@ -14,24 +14,37 @@ public class DirectionTest {
     /**
      * Do we get the correct delta when moving north?
      */
+
+    /**
+     * testDirection north.
+     */
     @Test
     void testNorth() {
         Direction north = Direction.valueOf("NORTH");
         assertThat(north.getDeltaY()).isEqualTo(-1);
     }
 
+    /**
+     * testDirection south.
+     */
     @Test
     void testSouth() {
         Direction north = Direction.valueOf("SOUTH");
         assertThat(north.getDeltaY()).isEqualTo(1);
     }
 
+    /**
+     * testDirection west.
+     */
     @Test
     void testWest() {
         Direction north = Direction.valueOf("WEST");
         assertThat(north.getDeltaX()).isEqualTo(-1);
     }
 
+    /**
+     * testDirection east.
+     */
     @Test
     void testEast() {
         Direction north = Direction.valueOf("EAST");
